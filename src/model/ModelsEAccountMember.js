@@ -26,70 +26,61 @@
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.ModelsAccount = factory(root.SendPostApi.ApiClient);
+    root.SendPostApi.ModelsEAccountMember = factory(root.SendPostApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelsAccount model module.
-   * @module model/ModelsAccount
+   * The ModelsEAccountMember model module.
+   * @module model/ModelsEAccountMember
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>ModelsAccount</code>.
-   * @alias module:model/ModelsAccount
+   * Constructs a new <code>ModelsEAccountMember</code>.
+   * @alias module:model/ModelsEAccountMember
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ModelsAccount</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ModelsEAccountMember</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelsAccount} obj Optional instance to populate.
-   * @return {module:model/ModelsAccount} The populated <code>ModelsAccount</code> instance.
+   * @param {module:model/ModelsEAccountMember} obj Optional instance to populate.
+   * @return {module:model/ModelsEAccountMember} The populated <code>ModelsEAccountMember</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('apiKey'))
-        obj.apiKey = ApiClient.convertToType(data['apiKey'], 'String');
-      if (data.hasOwnProperty('created'))
-        obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('companyName'))
+        obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('currentEmailServiceProvider'))
         obj.currentEmailServiceProvider = ApiClient.convertToType(data['currentEmailServiceProvider'], 'String');
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
-      if (data.hasOwnProperty('lock_threshold'))
-        obj.lockThreshold = ApiClient.convertToType(data['lock_threshold'], 'Number');
-      if (data.hasOwnProperty('locked'))
-        obj.locked = ApiClient.convertToType(data['locked'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('onboardQAnswered'))
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
+      if (data.hasOwnProperty('phoneNumber'))
+        obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
         obj.sendingVolumePerMonth = ApiClient.convertToType(data['sendingVolumePerMonth'], 'String');
-      if (data.hasOwnProperty('url'))
-        obj.url = ApiClient.convertToType(data['url'], 'String');
+      if (data.hasOwnProperty('uid'))
+        obj.uid = ApiClient.convertToType(data['uid'], 'String');
+      if (data.hasOwnProperty('verifyEmail'))
+        obj.verifyEmail = ApiClient.convertToType(data['verifyEmail'], 'Boolean');
     }
     return obj;
   }
 
   /**
-   * @member {String} apiKey
+   * @member {String} companyName
    */
-  exports.prototype.apiKey = undefined;
-
-  /**
-   * @member {Number} created
-   */
-  exports.prototype.created = undefined;
+  exports.prototype.companyName = undefined;
 
   /**
    * @member {String} currentEmailServiceProvider
@@ -97,24 +88,9 @@
   exports.prototype.currentEmailServiceProvider = undefined;
 
   /**
-   * @member {Number} id
-   */
-  exports.prototype.id = undefined;
-
-  /**
    * @member {String} industry
    */
   exports.prototype.industry = undefined;
-
-  /**
-   * @member {Number} lockThreshold
-   */
-  exports.prototype.lockThreshold = undefined;
-
-  /**
-   * @member {Boolean} locked
-   */
-  exports.prototype.locked = undefined;
 
   /**
    * @member {String} name
@@ -127,14 +103,24 @@
   exports.prototype.onboardQAnswered = undefined;
 
   /**
+   * @member {String} phoneNumber
+   */
+  exports.prototype.phoneNumber = undefined;
+
+  /**
    * @member {String} sendingVolumePerMonth
    */
   exports.prototype.sendingVolumePerMonth = undefined;
 
   /**
-   * @member {String} url
+   * @member {String} uid
    */
-  exports.prototype.url = undefined;
+  exports.prototype.uid = undefined;
+
+  /**
+   * @member {Boolean} verifyEmail
+   */
+  exports.prototype.verifyEmail = undefined;
 
   return exports;
 

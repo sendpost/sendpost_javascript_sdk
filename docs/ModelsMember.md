@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **isForbidden** | **Boolean** |  | [optional] 
 **isVerified** | **Boolean** |  | [optional] 
+**companyName** | **String** |  | [optional] 
 **created** | **Number** |  | [optional] 
+**name** | **String** |  | [optional] 
+**phoneNumber** | **String** |  | [optional] 
 
 

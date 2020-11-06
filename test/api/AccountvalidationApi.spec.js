@@ -36,6 +36,32 @@
 
   describe('(package)', function() {
     describe('AccountvalidationApi', function() {
+      describe('validateRouterValidateEmailBulk', function() {
+        it('should call validateRouterValidateEmailBulk successfully', function(done) {
+          // TODO: uncomment, update parameter values for validateRouterValidateEmailBulk call and complete the assertions
+          /*
+          var fileinput = "/path/to/file.txt";
+          var xAccountApiKey = "xAccountApiKey_example";
+
+          instance.validateRouterValidateEmailBulk(fileinput, xAccountApiKey, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsBulkResponse);
+            expect(data.jobId).to.be.a('number');
+            expect(data.jobId).to.be("0");
+            expect(data.message).to.be.a('string');
+            expect(data.message).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('validationRouterCount', function() {
         it('should call validationRouterCount successfully', function(done) {
           // TODO: uncomment, update parameter values for validationRouterCount call and complete the assertions
@@ -123,6 +149,50 @@
               expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
       
             }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('validationRouterValidateEmailList', function() {
+        it('should call validationRouterValidateEmailList successfully', function(done) {
+          // TODO: uncomment, update parameter values for validationRouterValidateEmailList call and complete the assertions
+          /*
+          var xAccountApiKey = "xAccountApiKey_example";
+          var body = new SendPostApi.ModelsEmailList();
+          body.emailIds = ;
+
+          instance.validationRouterValidateEmailList(xAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsCleanedList);
+            {
+              let dataCtr = data.detailedResponse;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SendPostApi.ModelsSingleCleanedMail);
+                expect(data.email).to.be.a('string');
+                expect(data.email).to.be("");
+                expect(data.error).to.be.a('string');
+                expect(data.error).to.be("");
+                expect(data.reason).to.be.a(SendPostApi.ModelsValidationReason);
+                    expect(data.valid).to.be.a('boolean');
+                expect(data.valid).to.be(false);
+
+                      }
+            }
+            expect(data.invalid).to.be.a(Object);
+            expect(data.invalid).to.be();
+            expect(data.valid).to.be.a(Object);
+            expect(data.valid).to.be();
 
             done();
           });

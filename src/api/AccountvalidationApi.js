@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsValidation'], factory);
+    define(['ApiClient', 'model/ModelsBulkResponse', 'model/ModelsCleanedList', 'model/ModelsCountStat', 'model/ModelsEValidation', 'model/ModelsEmailList', 'model/ModelsValidation'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsValidation'));
+    module.exports = factory(require('../ApiClient'), require('../model/ModelsBulkResponse'), require('../model/ModelsCleanedList'), require('../model/ModelsCountStat'), require('../model/ModelsEValidation'), require('../model/ModelsEmailList'), require('../model/ModelsValidation'));
   } else {
     // Browser globals (root is window)
     if (!root.SendPostApi) {
       root.SendPostApi = {};
     }
-    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsValidation);
+    root.SendPostApi.AccountvalidationApi = factory(root.SendPostApi.ApiClient, root.SendPostApi.ModelsBulkResponse, root.SendPostApi.ModelsCleanedList, root.SendPostApi.ModelsCountStat, root.SendPostApi.ModelsEValidation, root.SendPostApi.ModelsEmailList, root.SendPostApi.ModelsValidation);
   }
-}(this, function(ApiClient, ModelsCountStat, ModelsEValidation, ModelsValidation) {
+}(this, function(ApiClient, ModelsBulkResponse, ModelsCleanedList, ModelsCountStat, ModelsEValidation, ModelsEmailList, ModelsValidation) {
   'use strict';
 
   /**
@@ -47,6 +47,60 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the validateRouterValidateEmailBulk operation.
+     * @callback module:api/AccountvalidationApi~validateRouterValidateEmailBulkCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsBulkResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate Emails In File Asynchronously
+     * @param {File} fileinput CSV whose emails need to be validated
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:api/AccountvalidationApi~validateRouterValidateEmailBulkCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsBulkResponse}
+     */
+    this.validateRouterValidateEmailBulk = function(fileinput, xAccountApiKey, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'fileinput' is set
+      if (fileinput === undefined || fileinput === null) {
+        throw new Error("Missing the required parameter 'fileinput' when calling validateRouterValidateEmailBulk");
+      }
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validateRouterValidateEmailBulk");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+        'fileinput': fileinput
+      };
+
+      var authNames = [];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = ModelsBulkResponse;
+
+      return this.apiClient.callApi(
+        '/account/validation/bulk', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the validationRouterCount operation.
@@ -198,6 +252,59 @@
 
       return this.apiClient.callApi(
         '/account/validation/', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validationRouterValidateEmailList operation.
+     * @callback module:api/AccountvalidationApi~validationRouterValidateEmailListCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ModelsCleanedList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate Email List Synchronously
+     * @param {String} xAccountApiKey Account API Key
+     * @param {module:model/ModelsEmailList} body The email list to be sent for being validated
+     * @param {module:api/AccountvalidationApi~validationRouterValidateEmailListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ModelsCleanedList}
+     */
+    this.validationRouterValidateEmailList = function(xAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xAccountApiKey' is set
+      if (xAccountApiKey === undefined || xAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xAccountApiKey' when calling validationRouterValidateEmailList");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling validationRouterValidateEmailList");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Account-ApiKey': xAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = ModelsCleanedList;
+
+      return this.apiClient.callApi(
+        '/account/validation/', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

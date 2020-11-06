@@ -63,8 +63,14 @@
         obj.isForbidden = ApiClient.convertToType(data['IsForbidden'], 'Boolean');
       if (data.hasOwnProperty('IsVerified'))
         obj.isVerified = ApiClient.convertToType(data['IsVerified'], 'Boolean');
+      if (data.hasOwnProperty('companyName'))
+        obj.companyName = ApiClient.convertToType(data['companyName'], 'String');
       if (data.hasOwnProperty('created'))
         obj.created = ApiClient.convertToType(data['created'], 'Number');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('phoneNumber'))
+        obj.phoneNumber = ApiClient.convertToType(data['phoneNumber'], 'String');
     }
     return obj;
   }
@@ -90,9 +96,24 @@
   exports.prototype.isVerified = undefined;
 
   /**
+   * @member {String} companyName
+   */
+  exports.prototype.companyName = undefined;
+
+  /**
    * @member {Number} created
    */
   exports.prototype.created = undefined;
+
+  /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
+
+  /**
+   * @member {String} phoneNumber
+   */
+  exports.prototype.phoneNumber = undefined;
 
   return exports;
 

@@ -1,18 +1,16 @@
-# SendPostApi.ModelsAccount
+# SendPostApi.ModelsEAccountMember
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apiKey** | **String** |  | [optional] 
-**created** | **Number** |  | [optional] 
+**companyName** | **String** |  | [optional] 
 **currentEmailServiceProvider** | **String** |  | [optional] 
-**id** | **Number** |  | [optional] 
 **industry** | **String** |  | [optional] 
-**lockThreshold** | **Number** |  | [optional] 
-**locked** | **Boolean** |  | [optional] 
 **name** | **String** |  | [optional] 
 **onboardQAnswered** | **Boolean** |  | [optional] 
+**phoneNumber** | **String** |  | [optional] 
 **sendingVolumePerMonth** | **String** |  | [optional] 
-**url** | **String** |  | [optional] 
+**uid** | **String** |  | [optional] 
+**verifyEmail** | **Boolean** |  | [optional] 
 
 

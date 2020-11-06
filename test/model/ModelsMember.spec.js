@@ -65,10 +65,28 @@
         // expect(instance.isVerified).to.be(expectedValueLiteral);
       });
 
+      it('should have the property companyName (base name: "companyName")', function() {
+        // TODO: update the code to test the property companyName
+        expect(instance).to.have.property('companyName');
+        // expect(instance.companyName).to.be(expectedValueLiteral);
+      });
+
       it('should have the property created (base name: "created")', function() {
         // TODO: update the code to test the property created
         expect(instance).to.have.property('created');
         // expect(instance.created).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property phoneNumber (base name: "phoneNumber")', function() {
+        // TODO: update the code to test the property phoneNumber
+        expect(instance).to.have.property('phoneNumber');
+        // expect(instance.phoneNumber).to.be(expectedValueLiteral);
       });
 
     });

@@ -4,10 +4,61 @@ All URIs are relative to *https://api.sendpost.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**validateRouterValidateEmailBulk**](AccountvalidationApi.md#validateRouterValidateEmailBulk) | **POST** /account/validation/bulk | 
 [**validationRouterCount**](AccountvalidationApi.md#validationRouterCount) | **GET** /account/validation/count | 
 [**validationRouterDeleteValidation**](AccountvalidationApi.md#validationRouterDeleteValidation) | **DELETE** /account/validation/ | 
 [**validationRouterGetAll**](AccountvalidationApi.md#validationRouterGetAll) | **GET** /account/validation/ | 
+[**validationRouterValidateEmailList**](AccountvalidationApi.md#validationRouterValidateEmailList) | **POST** /account/validation/ | 
 
+
+<a name="validateRouterValidateEmailBulk"></a>
+# **validateRouterValidateEmailBulk**
+> ModelsBulkResponse validateRouterValidateEmailBulk(fileinput, xAccountApiKey)
+
+
+
+Validate Emails In File Asynchronously
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var fileinput = "/path/to/file.txt"; // File | CSV whose emails need to be validated
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validateRouterValidateEmailBulk(fileinput, xAccountApiKey, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileinput** | **File**| CSV whose emails need to be validated | 
+ **xAccountApiKey** | **String**| Account API Key | 
+
+### Return type
+
+[**ModelsBulkResponse**](ModelsBulkResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
 
 <a name="validationRouterCount"></a>
 # **validationRouterCount**
@@ -148,6 +199,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[ModelsValidation]**](ModelsValidation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="validationRouterValidateEmailList"></a>
+# **validationRouterValidateEmailList**
+> ModelsCleanedList validationRouterValidateEmailList(xAccountApiKey, body)
+
+
+
+Validate Email List Synchronously
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.AccountvalidationApi();
+
+var xAccountApiKey = "xAccountApiKey_example"; // String | Account API Key
+
+var body = new SendPostApi.ModelsEmailList(); // ModelsEmailList | The email list to be sent for being validated
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.validationRouterValidateEmailList(xAccountApiKey, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xAccountApiKey** | **String**| Account API Key | 
+ **body** | [**ModelsEmailList**](ModelsEmailList.md)| The email list to be sent for being validated | 
+
+### Return type
+
+[**ModelsCleanedList**](ModelsCleanedList.md)
 
 ### Authorization
 
