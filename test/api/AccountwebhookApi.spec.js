@@ -118,38 +118,6 @@
           done();
         });
       });
-      describe('accountWebhookRouterCreateAccountWebhookInAccountWebhookCache', function() {
-        it('should call accountWebhookRouterCreateAccountWebhookInAccountWebhookCache successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountWebhookRouterCreateAccountWebhookInAccountWebhookCache call
-          /*
-          var body = new SendPostApi.ModelsAccountWebhook();
-          body.clicked = false;
-          body.created = "0";
-          body.delivered = false;
-          body.dropped = false;
-          body.enabled = false;
-          body.hardBounced = false;
-          body.id = "0";
-          body.opened = false;
-          body.processed = false;
-          body.softBounced = false;
-          body.spam = false;
-          body.unsubscribed = false;
-          body.url = "";
-
-          instance.accountWebhookRouterCreateAccountWebhookInAccountWebhookCache(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('accountWebhookRouterDelete', function() {
         it('should call accountWebhookRouterDelete successfully', function(done) {
           // TODO: uncomment, update parameter values for accountWebhookRouterDelete call and complete the assertions
@@ -168,38 +136,6 @@
             expect(data.id).to.be("0");
             expect(data.message).to.be.a('string');
             expect(data.message).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache', function() {
-        it('should call accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache successfully', function(done) {
-          // TODO: uncomment, update parameter values for accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache call
-          /*
-          var body = new SendPostApi.ModelsAccountWebhook();
-          body.clicked = false;
-          body.created = "0";
-          body.delivered = false;
-          body.dropped = false;
-          body.enabled = false;
-          body.hardBounced = false;
-          body.id = "0";
-          body.opened = false;
-          body.processed = false;
-          body.softBounced = false;
-          body.spam = false;
-          body.unsubscribed = false;
-          body.url = "";
-
-          instance.accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
 
             done();
           });

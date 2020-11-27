@@ -65,12 +65,20 @@
         obj.id = ApiClient.convertToType(data['id'], 'Number');
       if (data.hasOwnProperty('industry'))
         obj.industry = ApiClient.convertToType(data['industry'], 'String');
-      if (data.hasOwnProperty('lock_threshold'))
-        obj.lockThreshold = ApiClient.convertToType(data['lock_threshold'], 'Number');
+      if (data.hasOwnProperty('isCanceled'))
+        obj.isCanceled = ApiClient.convertToType(data['isCanceled'], 'Boolean');
+      if (data.hasOwnProperty('isLastPaymentFailed'))
+        obj.isLastPaymentFailed = ApiClient.convertToType(data['isLastPaymentFailed'], 'Boolean');
+      if (data.hasOwnProperty('isUpgraded'))
+        obj.isUpgraded = ApiClient.convertToType(data['isUpgraded'], 'Boolean');
+      if (data.hasOwnProperty('lockThreshold'))
+        obj.lockThreshold = ApiClient.convertToType(data['lockThreshold'], 'Number');
       if (data.hasOwnProperty('locked'))
         obj.locked = ApiClient.convertToType(data['locked'], 'Boolean');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('onboardCFinished'))
+        obj.onboardCFinished = ApiClient.convertToType(data['onboardCFinished'], 'Boolean');
       if (data.hasOwnProperty('onboardQAnswered'))
         obj.onboardQAnswered = ApiClient.convertToType(data['onboardQAnswered'], 'Boolean');
       if (data.hasOwnProperty('sendingVolumePerMonth'))
@@ -107,6 +115,21 @@
   exports.prototype.industry = undefined;
 
   /**
+   * @member {Boolean} isCanceled
+   */
+  exports.prototype.isCanceled = undefined;
+
+  /**
+   * @member {Boolean} isLastPaymentFailed
+   */
+  exports.prototype.isLastPaymentFailed = undefined;
+
+  /**
+   * @member {Boolean} isUpgraded
+   */
+  exports.prototype.isUpgraded = undefined;
+
+  /**
    * @member {Number} lockThreshold
    */
   exports.prototype.lockThreshold = undefined;
@@ -120,6 +143,11 @@
    * @member {String} name
    */
   exports.prototype.name = undefined;
+
+  /**
+   * @member {Boolean} onboardCFinished
+   */
+  exports.prototype.onboardCFinished = undefined;
 
   /**
    * @member {Boolean} onboardQAnswered

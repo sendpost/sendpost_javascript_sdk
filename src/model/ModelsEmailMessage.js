@@ -73,6 +73,8 @@
         obj.replyTo = ModelsReplyTo.constructFromObject(data['replyTo']);
       if (data.hasOwnProperty('subject'))
         obj.subject = ApiClient.convertToType(data['subject'], 'String');
+      if (data.hasOwnProperty('template'))
+        obj.template = ApiClient.convertToType(data['template'], 'String');
       if (data.hasOwnProperty('textBody'))
         obj.textBody = ApiClient.convertToType(data['textBody'], 'String');
       if (data.hasOwnProperty('to'))
@@ -129,6 +131,11 @@
    * @member {String} subject
    */
   exports.prototype.subject = undefined;
+
+  /**
+   * @member {String} template
+   */
+  exports.prototype.template = undefined;
 
   /**
    * @member {String} textBody

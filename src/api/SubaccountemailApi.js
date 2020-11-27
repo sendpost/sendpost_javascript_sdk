@@ -100,6 +100,59 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the emailRouterSendEmailWithTemplate operation.
+     * @callback module:api/SubaccountemailApi~emailRouterSendEmailWithTemplateCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ModelsEmailResponse>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send Email To Contacts With Template
+     * @param {String} xSubAccountApiKey Sub-Account API Key
+     * @param {module:model/ModelsEmailMessage} body The Email Message
+     * @param {module:api/SubaccountemailApi~emailRouterSendEmailWithTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ModelsEmailResponse>}
+     */
+    this.emailRouterSendEmailWithTemplate = function(xSubAccountApiKey, body, callback) {
+      var postBody = body;
+
+      // verify the required parameter 'xSubAccountApiKey' is set
+      if (xSubAccountApiKey === undefined || xSubAccountApiKey === null) {
+        throw new Error("Missing the required parameter 'xSubAccountApiKey' when calling emailRouterSendEmailWithTemplate");
+      }
+
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling emailRouterSendEmailWithTemplate");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-SubAccount-ApiKey': xSubAccountApiKey
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [ModelsEmailResponse];
+
+      return this.apiClient.callApi(
+        '/subaccount/email/template', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;

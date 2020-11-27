@@ -59,10 +59,22 @@
         // expect(instance.industry).to.be(expectedValueLiteral);
       });
 
+      it('should have the property logoURL (base name: "logoURL")', function() {
+        // TODO: update the code to test the property logoURL
+        expect(instance).to.have.property('logoURL');
+        // expect(instance.logoURL).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property onboardCFinished (base name: "onboardCFinished")', function() {
+        // TODO: update the code to test the property onboardCFinished
+        expect(instance).to.have.property('onboardCFinished');
+        // expect(instance.onboardCFinished).to.be(expectedValueLiteral);
       });
 
       it('should have the property onboardQAnswered (base name: "onboardQAnswered")', function() {

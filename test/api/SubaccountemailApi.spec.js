@@ -55,6 +55,7 @@
           body.replyTo.email = "";
           body.replyTo.name = "";
           body.subject = "";
+          body.template = "";
           body.textBody = "";
           body.to = [new SendPostApi.ModelsTo()];
           body.to[0].customFields = ;
@@ -64,6 +65,64 @@
           body.trackOpens = false;
 
           instance.emailRouterSendEmail(xSubAccountApiKey, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(SendPostApi.ModelsEmailResponse);
+              expect(data.errorCode).to.be.a(SendPostApi.ModelsEmailErrorCode);
+                  expect(data.message).to.be.a('string');
+              expect(data.message).to.be("");
+              expect(data.messageId).to.be.a('string');
+              expect(data.messageId).to.be("");
+              expect(data.submittedAt).to.be.a('number');
+              expect(data.submittedAt).to.be("0");
+              expect(data.to).to.be.a('string');
+              expect(data.to).to.be("");
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('emailRouterSendEmailWithTemplate', function() {
+        it('should call emailRouterSendEmailWithTemplate successfully', function(done) {
+          // TODO: uncomment, update parameter values for emailRouterSendEmailWithTemplate call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var body = new SendPostApi.ModelsEmailMessage();
+          body.ampBody = "";
+          body.from = new SendPostApi.ModelsFrom();
+          body.from.email = "";
+          body.from.name = "";
+          body.groups = ;
+          body.headers = ;
+          body.htmlBody = "";
+          body.ippool = "";
+          body.preText = "";
+          body.replyTo = new SendPostApi.ModelsReplyTo();
+          body.replyTo.email = "";
+          body.replyTo.name = "";
+          body.subject = "";
+          body.template = "";
+          body.textBody = "";
+          body.to = [new SendPostApi.ModelsTo()];
+          body.to[0].customFields = ;
+          body.to[0].email = "";
+          body.to[0].name = "";
+          body.trackClicks = false;
+          body.trackOpens = false;
+
+          instance.emailRouterSendEmailWithTemplate(xSubAccountApiKey, body, function(error, data, response) {
             if (error) {
               done(error);
               return;

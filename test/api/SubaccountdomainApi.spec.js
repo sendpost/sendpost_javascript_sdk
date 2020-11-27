@@ -109,6 +109,8 @@
               expect(data.track.type).to.be("");
             expect(data.trackVerified).to.be.a('boolean');
             expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
 
             done();
           });
@@ -192,6 +194,8 @@
               expect(data.track.type).to.be("");
             expect(data.trackVerified).to.be.a('boolean');
             expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
 
             done();
           });
@@ -257,6 +261,8 @@
                 expect(data.track.type).to.be("");
               expect(data.trackVerified).to.be.a('boolean');
               expect(data.trackVerified).to.be(false);
+              expect(data.verified).to.be.a('boolean');
+              expect(data.verified).to.be(false);
             }
 
             done();
@@ -317,6 +323,8 @@
               expect(data.track.type).to.be("");
             expect(data.trackVerified).to.be.a('boolean');
             expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
 
             done();
           });
@@ -374,6 +382,90 @@
               expect(data.track.type).to.be("");
             expect(data.trackVerified).to.be.a('boolean');
             expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainRouterVerifyByToken', function() {
+        it('should call domainRouterVerifyByToken successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterVerifyByToken call and complete the assertions
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var domainId = 789;
+          var token = "token_example";
+
+          instance.domainRouterVerifyByToken(xSubAccountApiKey, domainId, token, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SendPostApi.ModelsDomain);
+            expect(data.created).to.be.a('number');
+            expect(data.created).to.be("0");
+            expect(data.dkim).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.dkim.host).to.be.a('string');
+              expect(data.dkim.host).to.be("");
+              expect(data.dkim.textValue).to.be.a('string');
+              expect(data.dkim.textValue).to.be("");
+              expect(data.dkim.type).to.be.a('string');
+              expect(data.dkim.type).to.be("");
+            expect(data.dkimConfig).to.be.a('string');
+            expect(data.dkimConfig).to.be("");
+            expect(data.dkimVerified).to.be.a('boolean');
+            expect(data.dkimVerified).to.be(false);
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be("0");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.returnPath).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.returnPath.host).to.be.a('string');
+              expect(data.returnPath.host).to.be("");
+              expect(data.returnPath.textValue).to.be.a('string');
+              expect(data.returnPath.textValue).to.be("");
+              expect(data.returnPath.type).to.be.a('string');
+              expect(data.returnPath.type).to.be("");
+            expect(data.returnPathVerified).to.be.a('boolean');
+            expect(data.returnPathVerified).to.be(false);
+            expect(data.track).to.be.a(SendPostApi.ModelsDNSRecord);
+                  expect(data.track.host).to.be.a('string');
+              expect(data.track.host).to.be("");
+              expect(data.track.textValue).to.be.a('string');
+              expect(data.track.textValue).to.be("");
+              expect(data.track.type).to.be.a('string');
+              expect(data.track.type).to.be("");
+            expect(data.trackVerified).to.be.a('boolean');
+            expect(data.trackVerified).to.be(false);
+            expect(data.verified).to.be.a('boolean');
+            expect(data.verified).to.be(false);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('domainRouterVerifyRequest', function() {
+        it('should call domainRouterVerifyRequest successfully', function(done) {
+          // TODO: uncomment, update parameter values for domainRouterVerifyRequest call
+          /*
+          var xSubAccountApiKey = "xSubAccountApiKey_example";
+          var domainId = 789;
+          var body = new SendPostApi.ModelsVerifyByTokenRequest();
+          body.email = "";
+
+          instance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });

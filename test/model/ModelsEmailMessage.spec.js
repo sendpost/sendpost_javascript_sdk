@@ -95,6 +95,12 @@
         // expect(instance.subject).to.be(expectedValueLiteral);
       });
 
+      it('should have the property template (base name: "template")', function() {
+        // TODO: update the code to test the property template
+        expect(instance).to.have.property('template');
+        // expect(instance.template).to.be(expectedValueLiteral);
+      });
+
       it('should have the property textBody (base name: "textBody")', function() {
         // TODO: update the code to test the property textBody
         expect(instance).to.have.property('textBody');

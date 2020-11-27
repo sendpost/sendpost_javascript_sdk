@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**domainRouterGetAll**](SubaccountdomainApi.md#domainRouterGetAll) | **GET** /subaccount/domain/ | 
 [**domainRouterUpdate**](SubaccountdomainApi.md#domainRouterUpdate) | **PUT** /subaccount/domain/{domainId} | 
 [**domainRouterVerify**](SubaccountdomainApi.md#domainRouterVerify) | **POST** /subaccount/domain/{domainId}/verify | 
+[**domainRouterVerifyByToken**](SubaccountdomainApi.md#domainRouterVerifyByToken) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+[**domainRouterVerifyRequest**](SubaccountdomainApi.md#domainRouterVerifyRequest) | **POST** /subaccount/domain/{domainId}/verify/email | 
 
 
 <a name="domainRouterCount"></a>
@@ -351,6 +353,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterVerifyByToken"></a>
+# **domainRouterVerifyByToken**
+> ModelsDomain domainRouterVerifyByToken(xSubAccountApiKey, domainId, token)
+
+
+
+Verify Domain By Signed Token
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainId = 789; // Number | the DomainId you want to get
+
+var token = "token_example"; // String | The signed token used to verify
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.domainRouterVerifyByToken(xSubAccountApiKey, domainId, token, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainId** | **Number**| the DomainId you want to get | 
+ **token** | **String**| The signed token used to verify | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="domainRouterVerifyRequest"></a>
+# **domainRouterVerifyRequest**
+> domainRouterVerifyRequest(xSubAccountApiKey, domainId, body)
+
+
+
+Verify Domain By Email Request
+
+### Example
+```javascript
+var SendPostApi = require('send_post_api');
+
+var apiInstance = new SendPostApi.SubaccountdomainApi();
+
+var xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
+
+var domainId = 789; // Number | the DomainId you want to get
+
+var body = new SendPostApi.ModelsVerifyByTokenRequest(); // ModelsVerifyByTokenRequest | The Email to be used to verify
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.domainRouterVerifyRequest(xSubAccountApiKey, domainId, body, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xSubAccountApiKey** | **String**| Sub-Account API Key | 
+ **domainId** | **Number**| the DomainId you want to get | 
+ **body** | [**ModelsVerifyByTokenRequest**](ModelsVerifyByTokenRequest.md)| The Email to be used to verify | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

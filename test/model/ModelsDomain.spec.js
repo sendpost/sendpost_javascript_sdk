@@ -101,6 +101,12 @@
         // expect(instance.trackVerified).to.be(expectedValueLiteral);
       });
 
+      it('should have the property verified (base name: "verified")', function() {
+        // TODO: update the code to test the property verified
+        expect(instance).to.have.property('verified');
+        // expect(instance.verified).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

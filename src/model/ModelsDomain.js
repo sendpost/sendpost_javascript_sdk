@@ -75,6 +75,8 @@
         obj.track = ModelsDNSRecord.constructFromObject(data['track']);
       if (data.hasOwnProperty('trackVerified'))
         obj.trackVerified = ApiClient.convertToType(data['trackVerified'], 'Boolean');
+      if (data.hasOwnProperty('verified'))
+        obj.verified = ApiClient.convertToType(data['verified'], 'Boolean');
     }
     return obj;
   }
@@ -128,6 +130,11 @@
    * @member {Boolean} trackVerified
    */
   exports.prototype.trackVerified = undefined;
+
+  /**
+   * @member {Boolean} verified
+   */
+  exports.prototype.verified = undefined;
 
   return exports;
 

@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **returnPathVerified** | **Boolean** |  | [optional] 
 **track** | [**ModelsDNSRecord**](ModelsDNSRecord.md) |  | [optional] 
 **trackVerified** | **Boolean** |  | [optional] 
+**verified** | **Boolean** |  | [optional] 
 
 

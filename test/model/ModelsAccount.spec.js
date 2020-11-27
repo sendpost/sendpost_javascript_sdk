@@ -71,7 +71,25 @@
         // expect(instance.industry).to.be(expectedValueLiteral);
       });
 
-      it('should have the property lockThreshold (base name: "lock_threshold")', function() {
+      it('should have the property isCanceled (base name: "isCanceled")', function() {
+        // TODO: update the code to test the property isCanceled
+        expect(instance).to.have.property('isCanceled');
+        // expect(instance.isCanceled).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isLastPaymentFailed (base name: "isLastPaymentFailed")', function() {
+        // TODO: update the code to test the property isLastPaymentFailed
+        expect(instance).to.have.property('isLastPaymentFailed');
+        // expect(instance.isLastPaymentFailed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isUpgraded (base name: "isUpgraded")', function() {
+        // TODO: update the code to test the property isUpgraded
+        expect(instance).to.have.property('isUpgraded');
+        // expect(instance.isUpgraded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property lockThreshold (base name: "lockThreshold")', function() {
         // TODO: update the code to test the property lockThreshold
         expect(instance).to.have.property('lockThreshold');
         // expect(instance.lockThreshold).to.be(expectedValueLiteral);
@@ -87,6 +105,12 @@
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property onboardCFinished (base name: "onboardCFinished")', function() {
+        // TODO: update the code to test the property onboardCFinished
+        expect(instance).to.have.property('onboardCFinished');
+        // expect(instance.onboardCFinished).to.be(expectedValueLiteral);
       });
 
       it('should have the property onboardQAnswered (base name: "onboardQAnswered")', function() {

@@ -149,51 +149,6 @@
     }
 
     /**
-     * Callback function to receive the result of the accountWebhookRouterCreateAccountWebhookInAccountWebhookCache operation.
-     * @callback module:api/AccountwebhookApi~accountWebhookRouterCreateAccountWebhookInAccountWebhookCacheCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Add Account Webhook To AccountWebhook Cache
-     * @param {module:model/ModelsAccountWebhook} body Add account webhook to cache
-     * @param {module:api/AccountwebhookApi~accountWebhookRouterCreateAccountWebhookInAccountWebhookCacheCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.accountWebhookRouterCreateAccountWebhookInAccountWebhookCache = function(body, callback) {
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling accountWebhookRouterCreateAccountWebhookInAccountWebhookCache");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/account/webhook/cache', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the accountWebhookRouterDelete operation.
      * @callback module:api/AccountwebhookApi~accountWebhookRouterDeleteCallback
      * @param {String} error Error message, if any.
@@ -242,51 +197,6 @@
 
       return this.apiClient.callApi(
         '/account/webhook/{webhookId}', 'DELETE',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache operation.
-     * @callback module:api/AccountwebhookApi~accountWebhookRouterDeleteAccountWebhookInAccountWebhookCacheCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete Account Webhook which is in AccountWebhook Cache
-     * @param {module:model/ModelsAccountWebhook} body AccountWebhook content
-     * @param {module:api/AccountwebhookApi~accountWebhookRouterDeleteAccountWebhookInAccountWebhookCacheCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    this.accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache = function(body, callback) {
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling accountWebhookRouterDeleteAccountWebhookInAccountWebhookCache");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = null;
-
-      return this.apiClient.callApi(
-        '/account/webhook/cache', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

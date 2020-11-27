@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **preText** | **String** |  | [optional] 
 **replyTo** | [**ModelsReplyTo**](ModelsReplyTo.md) |  | [optional] 
 **subject** | **String** |  | [optional] 
+**template** | **String** |  | [optional] 
 **textBody** | **String** |  | [optional] 
 **to** | [**[ModelsTo]**](ModelsTo.md) |  | [optional] 
 **trackClicks** | **Boolean** |  | [optional] 
