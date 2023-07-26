@@ -42,5 +42,18 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendpost/sendpost_javascript_sdk.git"
+  },
+  "author": "dev@sendpost.io",
+  "bugs": {
+    "url": "https://github.com/sendpost/sendpost_javascript_sdk/issues"
+  },
+  "homepage": "https://github.com/sendpost/sendpost_javascript_sdk#readme"
 }
