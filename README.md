@@ -74,6 +74,41 @@ const apiKey = 'your_api_key'; // {String} Sub-Account API Key
     console.error(error);
   }
 })()
+```
+
+Example with cc, bcc and template:
+
+```javascript
+const { EmailApi, EmailMessage } = require('sendpost_js');
+const email = new EmailApi();
+const apiKey = 'your_api_key'; // {String} Sub-Account API Key
+
+(async function() {
+  const message = new EmailMessage();
+  message.from = { email: 'richard@piedpiper.com' };
+
+  message.to = [{
+    email: 'gavin@hooli.com',
+    cc: [{ email: 'dinesh@bachmanity.com' }],
+    bcc: [{ email: 'jian@bachmanity.com' }],
+  }]
+
+  message.subject = 'Hello'
+  message.htmlBody = '<strong>it works!</strong>';
+  message.ippool = 'PiedPiper'
+
+  message.template = 'Welcome Mail'
+
+  const opts = {
+    emailMessage: message
+  };
+  try {
+    const data = await email.sendEmailWithTemplate(apiKey, opts)
+    console.log('API called successfully. Returned data: ', data);
+  } catch (error) {
+    console.error(error);
+  }
+})()
 
 
 ```
