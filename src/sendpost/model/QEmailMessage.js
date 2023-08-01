@@ -21,7 +21,7 @@ import To from './To';
 /**
  * The QEmailMessage model module.
  * @module sendpost/model/QEmailMessage
- * @version 1.0.0
+ * @version 1.1.0
  */
 class QEmailMessage {
     /**

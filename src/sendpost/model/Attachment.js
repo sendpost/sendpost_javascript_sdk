@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Attachment model module.
  * @module sendpost/model/Attachment
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Attachment {
     /**

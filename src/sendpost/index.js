@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import Attachment from './model/Attachment';
 import City from './model/City';
 import CopyTo from './model/CopyTo';
+import CountStat from './model/CountStat';
 import Device from './model/Device';
 import EmailMessage from './model/EmailMessage';
 import EmailResponse from './model/EmailResponse';
@@ -24,11 +25,16 @@ import From from './model/From';
 import Os from './model/Os';
 import QEmailMessage from './model/QEmailMessage';
 import QEvent from './model/QEvent';
+import RDSuppression from './model/RDSuppression';
+import RSuppression from './model/RSuppression';
 import ReplyTo from './model/ReplyTo';
+import Suppression from './model/Suppression';
+import SuppressionEmail from './model/SuppressionEmail';
 import To from './model/To';
 import UserAgent from './model/UserAgent';
 import WebhookEvent from './model/WebhookEvent';
 import EmailApi from './api/EmailApi';
+import SuppressionApi from './api/SuppressionApi';
 
 
 /**
@@ -60,7 +66,7 @@ import EmailApi from './api/EmailApi';
 * </pre>
 * </p>
 * @module sendpost/index
-* @version 1.0.0
+* @version 1.1.0
 */
 export {
     /**
@@ -86,6 +92,12 @@ export {
      * @property {module:sendpost/model/CopyTo}
      */
     CopyTo,
+
+    /**
+     * The CountStat model constructor.
+     * @property {module:sendpost/model/CountStat}
+     */
+    CountStat,
 
     /**
      * The Device model constructor.
@@ -136,10 +148,34 @@ export {
     QEvent,
 
     /**
+     * The RDSuppression model constructor.
+     * @property {module:sendpost/model/RDSuppression}
+     */
+    RDSuppression,
+
+    /**
+     * The RSuppression model constructor.
+     * @property {module:sendpost/model/RSuppression}
+     */
+    RSuppression,
+
+    /**
      * The ReplyTo model constructor.
      * @property {module:sendpost/model/ReplyTo}
      */
     ReplyTo,
+
+    /**
+     * The Suppression model constructor.
+     * @property {module:sendpost/model/Suppression}
+     */
+    Suppression,
+
+    /**
+     * The SuppressionEmail model constructor.
+     * @property {module:sendpost/model/SuppressionEmail}
+     */
+    SuppressionEmail,
 
     /**
      * The To model constructor.
@@ -163,5 +199,11 @@ export {
     * The EmailApi service constructor.
     * @property {module:sendpost/api/EmailApi}
     */
-    EmailApi
+    EmailApi,
+
+    /**
+    * The SuppressionApi service constructor.
+    * @property {module:sendpost/api/SuppressionApi}
+    */
+    SuppressionApi
 };

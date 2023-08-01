@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Device model module.
- * @module sendpost/model/Device
+ * The CountStat model module.
+ * @module sendpost/model/CountStat
  * @version 1.1.0
  */
-class Device {
+class CountStat {
     /**
-     * Constructs a new <code>Device</code>.
-     * @alias module:sendpost/model/Device
+     * Constructs a new <code>CountStat</code>.
+     * @alias module:sendpost/model/CountStat
      */
     constructor() { 
         
-        Device.initialize(this);
+        CountStat.initialize(this);
     }
 
     /**
@@ -37,49 +37,45 @@ class Device {
     }
 
     /**
-     * Constructs a <code>Device</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CountStat</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:sendpost/model/Device} obj Optional instance to populate.
-     * @return {module:sendpost/model/Device} The populated <code>Device</code> instance.
+     * @param {module:sendpost/model/CountStat} obj Optional instance to populate.
+     * @return {module:sendpost/model/CountStat} The populated <code>CountStat</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Device();
+            obj = obj || new CountStat();
 
-            if (data.hasOwnProperty('Family')) {
-                obj['Family'] = ApiClient.convertToType(data['Family'], 'String');
+            if (data.hasOwnProperty('count')) {
+                obj['count'] = ApiClient.convertToType(data['count'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>Device</code>.
+     * Validates the JSON data with respect to <code>CountStat</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Device</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CountStat</code>.
      */
     static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['Family'] && !(typeof data['Family'] === 'string' || data['Family'] instanceof String)) {
-            throw new Error("Expected the field `Family` to be a primitive type in the JSON string but got " + data['Family']);
-        }
 
         return true;
     }
 
 /**
-     * @return {String}
+     * @return {Number}
      */
-    getFamily() {
-        return this.Family;
+    getCount() {
+        return this.count;
     }
 
     /**
-     * @param {String} family
+     * @param {Number} count
      */
-    setFamily(family) {
-        this['Family'] = family;
+    setCount(count) {
+        this['count'] = count;
     }
 
 }
@@ -87,14 +83,14 @@ class Device {
 
 
 /**
- * @member {String} Family
+ * @member {Number} count
  */
-Device.prototype['Family'] = undefined;
+CountStat.prototype['count'] = undefined;
 
 
 
 
 
 
-export default Device;
+export default CountStat;
 

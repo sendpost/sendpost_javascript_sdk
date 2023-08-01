@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Os model module.
  * @module sendpost/model/Os
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Os {
     /**

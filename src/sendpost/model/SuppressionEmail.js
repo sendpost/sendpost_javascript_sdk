@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The From model module.
- * @module sendpost/model/From
+ * The SuppressionEmail model module.
+ * @module sendpost/model/SuppressionEmail
  * @version 1.1.0
  */
-class From {
+class SuppressionEmail {
     /**
-     * Constructs a new <code>From</code>.
-     * @alias module:sendpost/model/From
+     * Constructs a new <code>SuppressionEmail</code>.
+     * @alias module:sendpost/model/SuppressionEmail
      */
     constructor() { 
         
-        From.initialize(this);
+        SuppressionEmail.initialize(this);
     }
 
     /**
@@ -37,39 +37,32 @@ class From {
     }
 
     /**
-     * Constructs a <code>From</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SuppressionEmail</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:sendpost/model/From} obj Optional instance to populate.
-     * @return {module:sendpost/model/From} The populated <code>From</code> instance.
+     * @param {module:sendpost/model/SuppressionEmail} obj Optional instance to populate.
+     * @return {module:sendpost/model/SuppressionEmail} The populated <code>SuppressionEmail</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new From();
+            obj = obj || new SuppressionEmail();
 
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>From</code>.
+     * Validates the JSON data with respect to <code>SuppressionEmail</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>From</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SuppressionEmail</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
         if (data['email'] && !(typeof data['email'] === 'string' || data['email'] instanceof String)) {
             throw new Error("Expected the field `email` to be a primitive type in the JSON string but got " + data['email']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
 
         return true;
@@ -88,19 +81,6 @@ class From {
     setEmail(email) {
         this['email'] = email;
     }
-/**
-     * @return {String}
-     */
-    getName() {
-        return this.name;
-    }
-
-    /**
-     * @param {String} name
-     */
-    setName(name) {
-        this['name'] = name;
-    }
 
 }
 
@@ -109,17 +89,12 @@ class From {
 /**
  * @member {String} email
  */
-From.prototype['email'] = undefined;
-
-/**
- * @member {String} name
- */
-From.prototype['name'] = undefined;
+SuppressionEmail.prototype['email'] = undefined;
 
 
 
 
 
 
-export default From;
+export default SuppressionEmail;
 

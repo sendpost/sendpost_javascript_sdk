@@ -20,7 +20,7 @@ Send Email To Contacts
 ### Example
 
 ```javascript
-import sendpost from 'send_post_api';
+import sendpost from 'sendpost_javascript_sdk';
 
 let apiInstance = new sendpost.EmailApi();
 let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
@@ -68,7 +68,7 @@ Send Email To Contacts With Template
 ### Example
 
 ```javascript
-import sendpost from 'send_post_api';
+import sendpost from 'sendpost_javascript_sdk';
 
 let apiInstance = new sendpost.EmailApi();
 let xSubAccountApiKey = "xSubAccountApiKey_example"; // String | Sub-Account API Key
