@@ -63,7 +63,7 @@ No authorization required
 
 ## createSuppressions
 
-> Suppression createSuppressions(xSubAccountApiKey, opts)
+> [Suppression] createSuppressions(xSubAccountApiKey, opts)
 
 
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Suppression**](Suppression.md)
+[**[Suppression]**](Suppression.md)
 
 ### Authorization
 

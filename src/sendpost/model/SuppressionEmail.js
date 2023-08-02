@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SuppressionEmail model module.
  * @module sendpost/model/SuppressionEmail
- * @version 1.1.0
+ * @version 1.1.1
  */
 class SuppressionEmail {
     /**

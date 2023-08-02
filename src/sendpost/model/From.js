@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The From model module.
  * @module sendpost/model/From
- * @version 1.1.0
+ * @version 1.1.1
  */
 class From {
     /**

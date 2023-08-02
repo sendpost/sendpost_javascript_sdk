@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserAgent model module.
  * @module sendpost/model/UserAgent
- * @version 1.1.0
+ * @version 1.1.1
  */
 class UserAgent {
     /**

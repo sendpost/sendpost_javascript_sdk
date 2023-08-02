@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReplyTo model module.
  * @module sendpost/model/ReplyTo
- * @version 1.1.0
+ * @version 1.1.1
  */
 class ReplyTo {
     /**

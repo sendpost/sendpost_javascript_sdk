@@ -21,7 +21,7 @@ import Suppression from '../model/Suppression';
 /**
 * Suppression service.
 * @module sendpost/api/SuppressionApi
-* @version 1.1.0
+* @version 1.1.1
 */
 export default class SuppressionApi {
 
@@ -98,7 +98,7 @@ export default class SuppressionApi {
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {module:sendpost/model/RSuppression} [rSuppression] Suppression content
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:sendpost/model/Suppression} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:sendpost/model/Suppression>} and HTTP response
      */
     createSuppressionsWithHttpInfo(xSubAccountApiKey, opts) {
       opts = opts || {};
@@ -121,7 +121,7 @@ export default class SuppressionApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Suppression;
+      let returnType = [Suppression];
       return this.apiClient.callApi(
         '/subaccount/suppression/', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -134,7 +134,7 @@ export default class SuppressionApi {
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {module:sendpost/model/RSuppression} opts.rSuppression Suppression content
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:sendpost/model/Suppression}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:sendpost/model/Suppression>}
      */
     createSuppressions(xSubAccountApiKey, opts) {
       return this.createSuppressionsWithHttpInfo(xSubAccountApiKey, opts)

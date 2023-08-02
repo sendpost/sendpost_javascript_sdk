@@ -66,7 +66,7 @@ import SuppressionApi from './api/SuppressionApi';
 * </pre>
 * </p>
 * @module sendpost/index
-* @version 1.1.0
+* @version 1.1.1
 */
 export {
     /**

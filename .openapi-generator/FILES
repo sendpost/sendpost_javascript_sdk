@@ -51,9 +51,3 @@ src/sendpost/model/SuppressionEmail.js
 src/sendpost/model/To.js
 src/sendpost/model/UserAgent.js
 src/sendpost/model/WebhookEvent.js
-test/sendpost/api/SuppressionApi.spec.js
-test/sendpost/model/CountStat.spec.js
-test/sendpost/model/RDSuppression.spec.js
-test/sendpost/model/RSuppression.spec.js
-test/sendpost/model/Suppression.spec.js
-test/sendpost/model/SuppressionEmail.spec.js

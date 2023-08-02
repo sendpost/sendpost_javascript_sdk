@@ -17,7 +17,7 @@ import SuppressionEmail from './SuppressionEmail';
 /**
  * The RSuppression model module.
  * @module sendpost/model/RSuppression
- * @version 1.1.0
+ * @version 1.1.1
  */
 class RSuppression {
     /**

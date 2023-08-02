@@ -4,7 +4,7 @@
   "invokerPackage": "sendpost",
   "moduleName": "sendpost",
   "npmRepository": null,
-  "projectVersion": "1.1.0",
+  "projectVersion": "1.1.1",
   "projectName": "sendpost_javascript_sdk",
   "sourceFolder": "src",
   "modelPropertyNaming": "camelCase",
