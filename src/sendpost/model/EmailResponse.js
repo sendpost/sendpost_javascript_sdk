@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailResponse model module.
  * @module sendpost/model/EmailResponse
- * @version 1.1.1
+ * @version 1.1.2
  */
 class EmailResponse {
     /**

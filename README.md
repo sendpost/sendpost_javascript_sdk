@@ -231,6 +231,7 @@ Class | Method | HTTP request | Description
  - [sendpost.CopyTo](docs/CopyTo.md)
  - [sendpost.CountStat](docs/CountStat.md)
  - [sendpost.Device](docs/Device.md)
+ - [sendpost.DeleteResponse](docs/DeleteResponse.md)
  - [sendpost.EmailMessage](docs/EmailMessage.md)
  - [sendpost.EmailResponse](docs/EmailResponse.md)
  - [sendpost.EventMetadata](docs/EventMetadata.md)

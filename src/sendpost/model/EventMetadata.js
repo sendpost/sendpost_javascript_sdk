@@ -20,7 +20,7 @@ import UserAgent from './UserAgent';
 /**
  * The EventMetadata model module.
  * @module sendpost/model/EventMetadata
- * @version 1.1.1
+ * @version 1.1.2
  */
 class EventMetadata {
     /**

@@ -6,6 +6,7 @@ docs/Attachment.md
 docs/City.md
 docs/CopyTo.md
 docs/CountStat.md
+docs/DeleteResponse.md
 docs/Device.md
 docs/EmailApi.md
 docs/EmailMessage.md
@@ -35,6 +36,7 @@ src/sendpost/model/Attachment.js
 src/sendpost/model/City.js
 src/sendpost/model/CopyTo.js
 src/sendpost/model/CountStat.js
+src/sendpost/model/DeleteResponse.js
 src/sendpost/model/Device.js
 src/sendpost/model/EmailMessage.js
 src/sendpost/model/EmailResponse.js
@@ -51,3 +53,4 @@ src/sendpost/model/SuppressionEmail.js
 src/sendpost/model/To.js
 src/sendpost/model/UserAgent.js
 src/sendpost/model/WebhookEvent.js
+test/sendpost/model/DeleteResponse.spec.js

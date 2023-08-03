@@ -111,7 +111,7 @@ No authorization required
 
 ## deleteSuppression
 
-> Suppression deleteSuppression(xSubAccountApiKey, opts)
+> [DeleteResponse] deleteSuppression(xSubAccountApiKey, opts)
 
 
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Suppression**](Suppression.md)
+[**[DeleteResponse]**](DeleteResponse.md)
 
 ### Authorization
 

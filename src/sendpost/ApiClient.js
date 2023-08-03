@@ -17,7 +17,7 @@ import querystring from "querystring";
 
 /**
 * @module sendpost/ApiClient
-* @version 1.1.1
+* @version 1.1.2
 */
 
 /**
@@ -54,7 +54,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/1.1.1/Javascript'
+            'User-Agent': 'OpenAPI-Generator/1.1.2/Javascript'
         };
 
         /**

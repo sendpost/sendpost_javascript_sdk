@@ -18,7 +18,7 @@ import QEvent from './QEvent';
 /**
  * The WebhookEvent model module.
  * @module sendpost/model/WebhookEvent
- * @version 1.1.1
+ * @version 1.1.2
  */
 class WebhookEvent {
     /**

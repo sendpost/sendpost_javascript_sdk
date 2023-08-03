@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Device model module.
  * @module sendpost/model/Device
- * @version 1.1.1
+ * @version 1.1.2
  */
 class Device {
     /**

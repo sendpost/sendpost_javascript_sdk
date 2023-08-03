@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CountStat from '../model/CountStat';
+import DeleteResponse from '../model/DeleteResponse';
 import RDSuppression from '../model/RDSuppression';
 import RSuppression from '../model/RSuppression';
 import Suppression from '../model/Suppression';
@@ -21,7 +22,7 @@ import Suppression from '../model/Suppression';
 /**
 * Suppression service.
 * @module sendpost/api/SuppressionApi
-* @version 1.1.1
+* @version 1.1.2
 */
 export default class SuppressionApi {
 
@@ -149,7 +150,7 @@ export default class SuppressionApi {
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {module:sendpost/model/RDSuppression} [rDSuppression] Suppression content
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:sendpost/model/Suppression} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:sendpost/model/DeleteResponse>} and HTTP response
      */
     deleteSuppressionWithHttpInfo(xSubAccountApiKey, opts) {
       opts = opts || {};
@@ -172,7 +173,7 @@ export default class SuppressionApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Suppression;
+      let returnType = [DeleteResponse];
       return this.apiClient.callApi(
         '/subaccount/suppression/', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -185,7 +186,7 @@ export default class SuppressionApi {
      * @param {String} xSubAccountApiKey Sub-Account API Key
      * @param {Object} opts Optional parameters
      * @param {module:sendpost/model/RDSuppression} opts.rDSuppression Suppression content
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:sendpost/model/Suppression}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:sendpost/model/DeleteResponse>}
      */
     deleteSuppression(xSubAccountApiKey, opts) {
       return this.deleteSuppressionWithHttpInfo(xSubAccountApiKey, opts)

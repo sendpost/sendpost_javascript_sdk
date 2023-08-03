@@ -17,6 +17,7 @@ import Attachment from './model/Attachment';
 import City from './model/City';
 import CopyTo from './model/CopyTo';
 import CountStat from './model/CountStat';
+import DeleteResponse from './model/DeleteResponse';
 import Device from './model/Device';
 import EmailMessage from './model/EmailMessage';
 import EmailResponse from './model/EmailResponse';
@@ -66,7 +67,7 @@ import SuppressionApi from './api/SuppressionApi';
 * </pre>
 * </p>
 * @module sendpost/index
-* @version 1.1.1
+* @version 1.1.2
 */
 export {
     /**
@@ -98,6 +99,12 @@ export {
      * @property {module:sendpost/model/CountStat}
      */
     CountStat,
+
+    /**
+     * The DeleteResponse model constructor.
+     * @property {module:sendpost/model/DeleteResponse}
+     */
+    DeleteResponse,
 
     /**
      * The Device model constructor.

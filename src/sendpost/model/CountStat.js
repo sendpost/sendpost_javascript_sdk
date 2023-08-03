@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CountStat model module.
  * @module sendpost/model/CountStat
- * @version 1.1.1
+ * @version 1.1.2
  */
 class CountStat {
     /**
