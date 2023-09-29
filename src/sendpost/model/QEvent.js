@@ -17,7 +17,7 @@ import EventMetadata from './EventMetadata';
 /**
  * The QEvent model module.
  * @module sendpost/model/QEvent
- * @version 1.1.2
+ * @version 1.2.2
  */
 class QEvent {
     /**

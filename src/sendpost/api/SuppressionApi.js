@@ -22,7 +22,7 @@ import Suppression from '../model/Suppression';
 /**
 * Suppression service.
 * @module sendpost/api/SuppressionApi
-* @version 1.1.2
+* @version 1.2.2
 */
 export default class SuppressionApi {
 

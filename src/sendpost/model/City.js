@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The City model module.
  * @module sendpost/model/City
- * @version 1.1.2
+ * @version 1.2.2
  */
 class City {
     /**

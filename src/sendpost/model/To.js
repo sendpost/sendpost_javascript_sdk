@@ -17,7 +17,7 @@ import CopyTo from './CopyTo';
 /**
  * The To model module.
  * @module sendpost/model/To
- * @version 1.1.2
+ * @version 1.2.2
  */
 class To {
     /**

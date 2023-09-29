@@ -20,7 +20,7 @@ import UserAgent from './UserAgent';
 /**
  * The EventMetadata model module.
  * @module sendpost/model/EventMetadata
- * @version 1.1.2
+ * @version 1.2.2
  */
 class EventMetadata {
     /**
@@ -54,6 +54,12 @@ class EventMetadata {
             if (data.hasOwnProperty('clickedURL')) {
                 obj['clickedURL'] = ApiClient.convertToType(data['clickedURL'], 'String');
             }
+            if (data.hasOwnProperty('trackedIP')) {
+                obj['trackedIP'] = ApiClient.convertToType(data['trackedIP'], 'String');
+            }
+            if (data.hasOwnProperty('rawUserAgent')) {
+                obj['rawUserAgent'] = ApiClient.convertToType(data['rawUserAgent'], 'String');
+            }
             if (data.hasOwnProperty('device')) {
                 obj['device'] = Device.constructFromObject(data['device']);
             }
@@ -85,6 +91,14 @@ class EventMetadata {
         // ensure the json data is a string
         if (data['clickedURL'] && !(typeof data['clickedURL'] === 'string' || data['clickedURL'] instanceof String)) {
             throw new Error("Expected the field `clickedURL` to be a primitive type in the JSON string but got " + data['clickedURL']);
+        }
+        // ensure the json data is a string
+        if (data['trackedIP'] && !(typeof data['trackedIP'] === 'string' || data['trackedIP'] instanceof String)) {
+            throw new Error("Expected the field `trackedIP` to be a primitive type in the JSON string but got " + data['trackedIP']);
+        }
+        // ensure the json data is a string
+        if (data['rawUserAgent'] && !(typeof data['rawUserAgent'] === 'string' || data['rawUserAgent'] instanceof String)) {
+            throw new Error("Expected the field `rawUserAgent` to be a primitive type in the JSON string but got " + data['rawUserAgent']);
         }
         // validate the optional field `device`
         if (data['device']) { // data not null
@@ -122,6 +136,32 @@ class EventMetadata {
      */
     setClickedURL(clickedURL) {
         this['clickedURL'] = clickedURL;
+    }
+/**
+     * @return {String}
+     */
+    getTrackedIP() {
+        return this.trackedIP;
+    }
+
+    /**
+     * @param {String} trackedIP
+     */
+    setTrackedIP(trackedIP) {
+        this['trackedIP'] = trackedIP;
+    }
+/**
+     * @return {String}
+     */
+    getRawUserAgent() {
+        return this.rawUserAgent;
+    }
+
+    /**
+     * @param {String} rawUserAgent
+     */
+    setRawUserAgent(rawUserAgent) {
+        this['rawUserAgent'] = rawUserAgent;
     }
 /**
      * @return {module:sendpost/model/Device}
@@ -210,6 +250,16 @@ class EventMetadata {
  * @member {String} clickedURL
  */
 EventMetadata.prototype['clickedURL'] = undefined;
+
+/**
+ * @member {String} trackedIP
+ */
+EventMetadata.prototype['trackedIP'] = undefined;
+
+/**
+ * @member {String} rawUserAgent
+ */
+EventMetadata.prototype['rawUserAgent'] = undefined;
 
 /**
  * @member {module:sendpost/model/Device} device

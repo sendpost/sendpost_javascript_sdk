@@ -53,4 +53,3 @@ src/sendpost/model/SuppressionEmail.js
 src/sendpost/model/To.js
 src/sendpost/model/UserAgent.js
 src/sendpost/model/WebhookEvent.js
-test/sendpost/model/DeleteResponse.spec.js
